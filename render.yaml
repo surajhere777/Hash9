@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: experimental-constant-hash
+    runtime: python
+    plan: free
+    rootDir: Desktop/files
+    buildCommand: python -m py_compile server.py experimental_hash.py
+    startCommand: python server.py
+    healthCheckPath: /health
